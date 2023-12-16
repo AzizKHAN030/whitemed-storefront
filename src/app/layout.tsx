@@ -1,3 +1,5 @@
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+
 import type { Metadata } from 'next';
 import { Urbanist } from 'next/font/google';
 
