@@ -7,7 +7,7 @@ export interface ButtonProps
     }
 
 const Button = forwardRef<HTMLButtonElement,ButtonProps> (({
-    className, children,disabled, type="button", ...rest
+    className, children,disabled, type="button", ...props
 },ref)=>{
     return <button ref={ref} className={cn(`
     w-auto
@@ -21,7 +21,8 @@ const Button = forwardRef<HTMLButtonElement,ButtonProps> (({
     font-semibold,
     hover:opacity-75
     transition
-    `,className)}>{children}</button>
+    p-2
+    `,className)} {...props}>{children}</button>
 })
 
 Button.displayName = 'Button'
